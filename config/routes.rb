@@ -1,5 +1,11 @@
 MultistepSignup::Application.routes.draw do
 
+  get "registration/start"
+
+  get "registration/email"
+
+  get "registration/age"
+
   get "home/index"
 
   devise_for :users
