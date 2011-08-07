@@ -9,6 +9,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  user_id    :integer
+#  state      :string(255)
 #
 
 require 'spec_helper'

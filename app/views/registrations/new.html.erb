@@ -1,0 +1,10 @@
+<h1>Welcome to my app</h1>
+
+<p>Would you like to sign up?  Just enter your name to get going.</p>
+
+<%= form_for @registration, :url => {:action => "create"} do |f| %> 
+  <%= f.text_field :name %>
+  <%= f.submit "Get Started" %>
+<% end %>
+
+

@@ -4,6 +4,7 @@ gem 'rails', '3.0.9'
 gem 'rake', '0.8.7'
 gem 'devise'
 gem 'transitions', :require => ["transitions", "active_record/transitions"]
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

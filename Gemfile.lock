@@ -45,6 +45,9 @@ GEM
       rest-client (~> 1.6.1)
       term-ansicolor (~> 1.0.5)
     i18n (0.5.0)
+    jquery-rails (1.0.12)
+      railties (~> 3.0)
+      thor (~> 0.14)
     launchy (2.0.5)
       addressable (~> 2.2.6)
     mail (2.2.19)
@@ -109,6 +112,7 @@ DEPENDENCIES
   annotate
   devise
   heroku
+  jquery-rails
   rails (= 3.0.9)
   rake (= 0.8.7)
   rspec-rails

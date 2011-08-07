@@ -1,16 +1,16 @@
 MultistepSignup::Application.routes.draw do
 
-  get "registration/start"
-
-  get "registration/email"
-
-  get "registration/age"
-
-  get "home/index"
-
   devise_for :users
 
-  root :to => "home#index"
+  #not restful
+  match '/user' => 'users#show', :as => :user_show
+  match '/user/destroy' => 'users#destroy', :as => :user_destroy
+
+  resources :registrations, :only => [:new, :create, :edit, :update]
+  match '/registrations/:id/:registration_state' => 'registrations#edit', :as => :registration_state
+
+
+  root :to => "registrations#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

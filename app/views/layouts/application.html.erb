@@ -7,9 +7,11 @@
     <%= csrf_meta_tag %>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+    <%= user_signed_in? ? link_to("Sign out", destroy_user_session_path ) :
+      link_to("Sign in", new_user_session_path) %>
+    <% flash.each do |key, msg| %>
+      <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_ #{key}" %>
+    <% end %>
 
     <%= yield %>
 

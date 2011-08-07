@@ -1,0 +1,8 @@
+<h1>Registration#email</h1>
+
+Please provide your email address:
+
+<%= form_for @registration, :url => {:action => "update"} do |f| %> 
+  <%= f.text_field :email %>
+  <%= f.submit "Submit email" %>
+<% end %>

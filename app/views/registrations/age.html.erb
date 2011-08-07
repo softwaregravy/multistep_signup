@@ -1,0 +1,8 @@
+<h1>Registration#age</h1>
+
+Please provide your age:
+
+<%= form_for @registration, :url => {:action => "update"} do |f| %> 
+  <%= f.text_field :age %>
+  <%= f.submit "Submit age" %>
+<% end %>
