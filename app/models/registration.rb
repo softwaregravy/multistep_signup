@@ -60,7 +60,7 @@ class Registration < ActiveRecord::Base
   end 
 
   def email_in_use?(email)
-    Registration.where(:email => email).count > 0 || User.where(:email => email).count > 0
+    Registration.where(:email => email).count > 1 || User.where(:email => email).count > 0
   end 
 
   
